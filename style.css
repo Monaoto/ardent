@@ -1,0 +1,111 @@
+
+
+
+
+
+
+:root{
+  --gap:8px;
+  --min-thumb:88px;
+  --bg:#0f0101;
+  --muted:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#ffffff;
+}
+
+/* wrap centré */
+.wrap{
+  max-width:1200px;
+  width:100%;
+  height:100vh;
+  margin:0 auto;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* ARDENT en blanc */
+header h1{
+  font-size:22px;
+  letter-spacing:0.08em;
+  margin:0;
+  color:#ffffff;
+}
+
+/* grid serrée */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(var(--min-thumb), 1fr));
+  gap:var(--gap);
+}
+
+/* carre parfait */
+.card{
+  background:transparent;
+  border-radius:6px;
+  overflow:hidden;
+  aspect-ratio:1/1;
+  display:block;
+  position:relative;
+  box-shadow:0 1px 0 rgba(255,255,255,0.03);
+}
+
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* fade-in */
+.thumb{
+  opacity:0;
+  transform:translateY(8px) scale(.997);
+}
+
+.thumb.visible{
+  animation:fadeIn 520ms cubic-bezier(.2,.9,.3,1) forwards;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px) scale(.997)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+footer{
+  margin-top:14px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+
+a:focus, .card:focus{
+  outline:3px solid rgba(255,255,255,0.1);
+  outline-offset:3px;
+}
+
+/* mobile : vignettes un peu plus grandes */
+@media (max-width:420px){
+  :root{--min-thumb:110px}
+}
+
+/* HOVER : la carte se soulève légèrement */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
