@@ -6,7 +6,7 @@
 
 :root{
   --gap:8px;
-  --min-thumb:180px;
+  --min-thumb:200px;
   --bg:#0f0101;
   --muted:#ffffff;
 }
@@ -109,6 +109,7 @@ a:focus, .card:focus{
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 6px 18px rgba(0,0,0,0.22);
 }
+
 
 
 
