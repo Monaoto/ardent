@@ -1,120 +1,85 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ARDENT</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" type="image/png" href="火.png">
-<link rel="apple-touch-icon" href="favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ARDENT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="火.png"> 
+  <link rel="apple-touch-icon" href="favicon.png">
 </head>
 
-
 <body>
-<div class="wrap">
-<header>
-<h1>ARDENT</h1>
-<nav style="text-align:right; margin-top:10px;">
-<a href="#about-contact" class="about-btn">ABOUT / CONTACT</a>
-</nav>
-</header>
+    
+  <div class="wrap">
+    <header>
+      <h1>ARDENT</h1>
+    </header>
 
+    <main>
+     <section class="grid" id="grid">
 
-<main>
+  <a href="arsene.html" class="card thumb">
+    <img src="images/model1.jpg" alt="Model 1">
+  </a>
 
+  <a href="sarah.html" class="card thumb">
+    <img src="images/model2.jpg" alt="Model 2">
+  </a>
 
-<!-- SECTION GRID TALENTS -->
-<section class="grid" id="grid">
+  <a href="mimi.html" class="card thumb">
+    <img src="images/model3.jpg" alt="Model 3">
+  </a>
 
+  <a href="coco.html" class="card thumb">
+    <img src="images/model4.jpg" alt="Model 4">
+  </a>
 
-<a href="talents/arsene.html" class="card thumb">
-<img src="arsene.JPG" alt="ARSENE">
-</a>
+  <a href="titi.html" class="card thumb">
+    <img src="images/model5.jpg" alt="Model 5">
+  </a>
 
+  <a href="licia.html" class="card thumb">
+    <img src="images/model6.jpg" alt="Model 6">
+  </a>
 
-<a href="talents/sarah.html" class="card thumb">
-<img src="sarah.JPG" alt="SARAH">
-</a>
+  <a href="clem.html" class="card thumb">
+    <img src="images/model7.jpg" alt="Model 7">
+  </a>
 
+  <a href="amelie.html" class="card thumb">
+    <img src="images/model8.jpg" alt="Model 8">
+  </a>
 
-<a href="talents/mimi.html" class="card thumb">
-<img src="mimi.jpg" alt="MIMI">
-</a>
+  <a href="omar.html" class="card thumb">
+    <img src="images/model9.jpg" alt="Model 9">
+  </a>
 
-
-<a href="talents/coco.html" class="card thumb">
-<img src="coco.jpg" alt="COCO">
-</a>
-
-
-<a href="talents/titi.html" class="card thumb">
-<img src="titi.JPG" alt="TITI">
-</a>
-
-
-<a href="talents/licia.html" class="card thumb">
-<img src="licia.JPG" alt="LICIA">
-</a>
-
-
-<a href="talents/clem.html" class="card thumb">
-<img src="clem.JPG" alt="CLEM">
-</a>
-
-
-<a href="talents/amelie.html" class="card thumb">
-<img src="amelie.jpg" alt="AMELIE">
-</a>
-
-
-<a href="talents/omar.html" class="card thumb">
-<img src="omar.JPG" alt="OMAR">
-</a>
-
-
-<a href="talents/lazar.html" class="card thumb">
-<img src="lazar.JPG" alt="LAZAR">
-</a>
-
+  <a href="lazar.html" class="card thumb">
+    <img src="images/model10.jpg" alt="Model 10">
+  </a>
 
 </section>
+    </main>
 
+    <footer>
+      <code>casting agency based in paris</code>
+    </footer>
+  </div>
 
-<!-- SECTION ABOUT / CONTACT -->
-<section class="about-contact" id="about-contact" style="margin-top: 80px; text-align: center;">
-<h2>ABOUT</h2>
-<p>Ardent Management est une agence de scouting et de développement artistique basée à Paris. Nous révélons, accompagnons et guidons des talents émergents via une approche sensible, intuitive et créative.</p>
+  <script>
+    (function(){
+      const thumbs = Array.from(document.querySelectorAll('.thumb'));
+      const stagger = 120;
+      const startDelay = 200;
 
-
-<h2 style="margin-top: 40px;">CONTACT</h2>
-<p>Pour toute demande :<br>
-<a href="mailto:contact@ardent-agency.com">contact@ardent-agency.com</a></p>
-</section>
-
-
-</main>
-
-
-<footer>
-<code>casting agency based in paris</code>
-</footer>
-</div>
-
-
-<script>
-(function(){
-const thumbs = Array.from(document.querySelectorAll('.thumb'));
-const stagger = 120;
-const startDelay = 200;
-
-
-thumbs.forEach((el, i) => {
-const delay = startDelay + i * stagger;
-setTimeout(() => el.classList.add('visible'), delay);
-});
-})();
-</script>
-
+      thumbs.forEach((el, i) => {
+        const delay = startDelay + i * stagger;
+        setTimeout(() => el.classList.add('visible'), delay);
+      });
+    })();
+  </script>
 
 </body>
 </html>
+
